@@ -1,0 +1,11 @@
+{
+    "token": "",
+    "color": "#4e59d5",
+    "maxCountryNameLength": 32,
+    "moneyIntervalInHours": 4,
+    "industryCost": 50,
+    "armyCost": 5,
+    "tankCost": 15,
+    "topCountriesNumber": 50,
+    "saveGameInMinutes": 10
+}
