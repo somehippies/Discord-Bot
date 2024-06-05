@@ -51,20 +51,20 @@ class Country {
 }
 
 class Game {
-	constructor() {
-		this.countries = [];
-		this.started = false;
-	}
+    constructor() {
+        this.countries = reuqire('./countries/countries-1933.js').countries.map(c => new Country(...c));
+        this.started = false;
+    }
 
-	start(countriesFile) {
-		this.countries = require(`./countries/${countriesFile}`).countries.map(c => new Country(...c));
-		this.started = true;
-	}
+    start(countriesFile) {
+        this.countries = require(`./countries/${countriesFile}`).countries.map(c => new Country(...c));
+        this.started = true;
+    }
 
-	end() {
-		this.started = false;
-		this.countries = require('./countries.js').countries.map(c => new Country(...c));
-	}
+    end() {
+        this.started = false;
+        this.countries = require('./countries/countries-1933.js').countries.map(c => new Country(...c));
+    }
 
 	assignCountry(pid, country) {
 		const c = this.countries.find(c => c.country === country);
