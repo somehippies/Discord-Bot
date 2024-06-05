@@ -52,7 +52,7 @@ class Country {
 
 class Game {
     constructor() {
-        this.countries = reuqire('./countries/countries-1933.js').countries.map(c => new Country(...c));
+        this.countries = require('./countries/countries-1933.js').countries.map(c => new Country(...c));
         this.started = false;
     }
 
