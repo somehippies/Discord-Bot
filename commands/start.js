@@ -3,8 +3,14 @@ const settings = require('../settings.json');
 module.exports.interaction = async (interaction, game) => {
 	await interaction.deferReply();
 
+	const countriesFile = interaction.options.getString('countries-file');
+	const tankCost = interaction.options.getNumber('tank-cost');
+	if (!countriesFile.endsWith('.js')) return interaction.editReply('Invalid file format.');
 	if (game.started) return interaction.editReply('The game has already started.');
-	game.start();
+	game.start(countriesFile);
+	interaction.client.gameStart[interaction.guild.id] = Date.now();
+	interaction.client.yearStart[interaction.guild.id] = countriesFile.split('-')[1].split('.')[0];
+	interaction.client.tankCost[interaction.guild.id] = tankCost;
 
 	const embed = new djs.EmbedBuilder().setColor(settings.color);
 	let description = '';
@@ -42,5 +48,7 @@ module.exports.application_command = () => {
 	return new djs.SlashCommandBuilder()
 		.setName('start')
 		.setDescription('Starts a new game.')
-		.setDefaultMemberPermissions(djs.PermissionsBitField.Flags.Administrator);
+		.setDefaultMemberPermissions(djs.PermissionsBitField.Flags.Administrator)
+		.addStringOption(option => option.setName('countries-file').setDescription('What file to be used in the game.').setRequired(true))
+		.addNumberOption(option => option.setName('tank-cost').setDescription('The cost of a tank.').setRequired(true));
 };

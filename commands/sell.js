@@ -22,7 +22,7 @@ module.exports.interaction = async (interaction, game) => {
 			resource = 'army';
 			break;
 		case 'tank':
-			cost = (amount * settings.tankCost * 2) / 3;
+			cost = (amount * interaction.client.tankCost[interaction.guild.id] * 2) / 3;
 			resource = 'tank';
 			break;
 	}

@@ -52,11 +52,12 @@ class Country {
 
 class Game {
 	constructor() {
-		this.countries = require('./countries.js').countries.map(c => new Country(...c));
+		this.countries = [];
 		this.started = false;
 	}
 
-	start() {
+	start(countriesFile) {
+		this.countries = require(`./countries/${countriesFile}`).countries.map(c => new Country(...c));
 		this.started = true;
 	}
 
@@ -94,6 +95,7 @@ class Game {
 
 const games = {};
 
+//Money Interval Manager
 setInterval(async () => {
 	for (const guild of Object.keys(games)) {
 		const game = games[guild];
@@ -109,17 +111,21 @@ setInterval(async () => {
 	client.interval = Date.now();
 }, 1000 * 60 * 60 * settings.moneyIntervalInHours);
 
+//SaveGame Manager
 setInterval(async () => {
 	for (const guild of Object.keys(games)) {
 		const game = games[guild];
 		if (game.started) {
-			const save = JSON.stringify(game.countries);
+			const saveObj = { others: {}, game: [] };
+			saveObj.game = game.countries;
+			saveObj.others = { started: client.gameStart[guild], yearStart: client.yearStart[guild] };
 			//!! Please create the folder saves or this will error
-			fs.writeFileSync(`./saves/${guild}.json`, save);
+			fs.writeFileSync(`./saves/${guild}.json`, JSON.stringify(saveObj));
 			console.log(`Saved game in ${guild}`);
 		}
 	}
 }, 1000 * 60 * settings.saveGameInMinutes);
+
 //Commands handler
 const files = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const commands = {};
@@ -131,6 +137,9 @@ client.once('ready', async () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 	await require('./deploy-commands.js')(client);
 	client.interval = Date.now();
+	client.gameStart = {};
+	client.yearStart = {};
+	client.tankCost = {};
 });
 
 client.on('interactionCreate', async interaction => {

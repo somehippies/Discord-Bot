@@ -11,6 +11,7 @@ module.exports.interaction = async (interaction, game) => {
 	if (amount < 1) return interaction.editReply('You must buy at least 1.');
 	let cost = 0;
 	let resource = '';
+
 	switch (subcommand) {
 		case 'industry':
 			cost = amount * settings.industryCost;
@@ -22,7 +23,7 @@ module.exports.interaction = async (interaction, game) => {
 			resource = 'army';
 			break;
 		case 'tank':
-			cost = amount * settings.tankCost;
+			cost = amount * interaction.client.tankCost[interaction.guild.id];
 			resource = 'tank';
 			break;
 	}

@@ -9,7 +9,7 @@ module.exports.interaction = async (interaction, game, Country) => {
 	try {
 		const saveData = fs.readFileSync(`./saves/${guildId}.json`, 'utf-8');
 		const savedGame = JSON.parse(saveData);
-		game.countries = savedGame.map(countryData => {
+		game.countries = savedGame.game.map(countryData => {
 			const { country, industry, army, tank, money, type, flag } = countryData;
 			const countryInstance = new Country(country, industry, army, tank, money, type, flag);
 			countryInstance.active = true;
@@ -21,6 +21,8 @@ module.exports.interaction = async (interaction, game, Country) => {
 			return countryInstance;
 		});
 		game.started = true;
+		interaction.client.gameStart[interaction.guild.id] = savedGame.others.started;
+		interaction.client.yearStart[interaction.guild.id] = savedGame.others.yearStart;
 		await interaction.editReply('Game loaded and started successfully! Have fun!');
 	} catch (error) {
 		console.error(error);
