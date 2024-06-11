@@ -118,7 +118,7 @@ setInterval(async () => {
 		if (game.started) {
 			const saveObj = { others: {}, game: [] };
 			saveObj.game = game.countries;
-			saveObj.others = { started: client.gameStart[guild], yearStart: client.yearStart[guild] };
+			saveObj.others = { started: client.gameStart[guild], yearStart: client.yearStart[guild], tankCost: client.tankCost[guild] };
 			//!! Please create the folder saves or this will error
 			fs.writeFileSync(`./saves/${guild}.json`, JSON.stringify(saveObj));
 			console.log(`Saved game in ${guild}`);

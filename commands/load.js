@@ -23,6 +23,7 @@ module.exports.interaction = async (interaction, game, Country) => {
 		game.started = true;
 		interaction.client.gameStart[interaction.guild.id] = savedGame.others.started;
 		interaction.client.yearStart[interaction.guild.id] = savedGame.others.yearStart;
+		interaction.client.tankCost[interaction.guild.id] = savedGame.others.tankCost;
 		await interaction.editReply('Game loaded and started successfully! Have fun!');
 	} catch (error) {
 		console.error(error);
