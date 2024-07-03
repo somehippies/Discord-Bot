@@ -19,7 +19,7 @@ module.exports.countries = [
 	['Spain', 1700, 25, 0, 5, 'Minor Powers', '🇪🇸'],
 	['The Netherlands', 900, 10, 0, 10, 'Minor Powers', '🇳🇱'],
 	['Czechoslovakia', 700, 30, 0, 10, 'Minor Powers', '🇨🇿'],
-	['Poland', 700, 20, 0, 0, 'Regional Powers', '🇵🇱'],
+	['Poland', 700, 20, 0, 0, 'Minor Powers', '🇵🇱'],
 	['Ukraine', 200, 10, 0, 0, 'Minor Powers', '🇺🇦'],
 	['Yugoslavia', 1000, 20, 0, 5, 'Minor Powers', '🇷🇸'],
 	['Bulgaria', 800, 20, 0, 3, 'Minor Powers', '🇧🇬'],
