@@ -5,7 +5,7 @@ module.exports.countries = [
 	['Germany', 3000, 120, 0, 5, 'Major Powers', '🇩🇪'],
 
 	['China', 3000, 40, 0, 5, 'Regional Powers', '🇹🇼'],
-	['Italy', 2500, 20, 0, 10, 'Regional  Powers', '🇮🇹'],
+	['Italy', 2500, 20, 0, 10, 'Regional Powers', '🇮🇹'],
 	['Ottoman Empire', 2000, 60, 0, 5, 'Regional Powers', '🇹🇷'],
 	['Japan', 2000, 30, 0, 50, 'Regional Powers', '🇯🇵'],
 	['Russia', 1500, 150, 0, 20, 'Regional Powers', '🇷🇺'],
