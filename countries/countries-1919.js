@@ -57,8 +57,8 @@ module.exports.countries = [
 
 	['Egypt', 300, 5, 0, 5, 'Insignificant Powers', '🇬🇧🇪🇬'],
 	['Azerbaijan', 250, 10, 0, 0, 'Insignificant Powers', '🇦🇿'],
-	['Georgia', 200, 2, 0, 0, 'Minor Insignificant Powers', '🇬🇪'],
-	['Armenia', 150, 2, 0, 0, 'Minor Insignificant Powers', '🇦🇲'],
+	['Georgia', 200, 2, 0, 0, 'Insignificant Powers', '🇬🇪'],
+	['Armenia', 150, 2, 0, 0, 'Insignificant Powers', '🇦🇲'],
 	['German East Africa', 300, 5, 0, 5, 'Insignificant Powers', '🇩🇪'],
 	['German West Africa', 200, 3, 0, 5, 'Insignificant Powers', '🇩🇪'],
 	['German Namibia', 100, 2, 0, 5, 'Insignificant Powers', '🇩🇪'],
