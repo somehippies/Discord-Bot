@@ -11,7 +11,7 @@ module.exports.countries = [
 
 	['Canada', 600, 20, 0, 0, 'Regional Powers', '🇬🇧🇨🇦'],
 	['East India Company', 1800, 90, 0, 0, 'Regional Powers', '🇬🇧🇮🇳'],
-	['Japan', 1400, 105, , 0, 'Regional Powers', '🇯🇵'],
+	['Japan', 1400, 105, 0, 0, 'Regional Powers', '🇯🇵'],
 	['Spain', 1200, 80, 0, 0, 'Regional Powers', '🇪🇸'],
 	['Dutch East Indies', 600, 20, 0, 0, 'Regional Powers', '🇳🇱🇮🇩'],
 	['Egypt', 900, 130, 0, 0, 'Regional Powers', '🇪🇬'],
