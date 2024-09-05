@@ -24,7 +24,7 @@ module.exports.interaction = async (interaction, game) => {
 		.setColor(settings.color)
 		.setFooter({ text: `Requested by ${interaction.member.displayName}`, iconURL: interaction.member.displayAvatarURL() })
 		.setTitle(`${country.country} ${country.flag}`)
-		.setDescription(`You have sent $${amount} to ${recipient.country} ${recipient.flag}.`)
+		.setDescription(`You have sent ${amount} army to ${recipient.country} ${recipient.flag}.`)
 		.addFields(
 			{ name: 'army', value: `${Math.floor(country.army)}`, inline: true },
 			{ name: 'Recipient army', value: `${Math.floor(recipient.army)}`, inline: true },
