@@ -2,7 +2,7 @@
     "token": "",
     "color": "#4e59d5",
     "maxCountryNameLength": 32,
-    "moneyIntervalInHours": 4,
+    "moneyIntervalInHours": 8,
     "industryCost": 50,
     "armyCost": 5,
     "tankCost": 15,
