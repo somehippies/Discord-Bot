@@ -9,7 +9,7 @@ module.exports.interaction = async (interaction, game) => {
 	const startYear = parseInt(interaction.client.yearStart[interaction.guild.id]);
 	const msDiff = Date.now() - interaction.client.gameStart[interaction.guild.id];
 	const hoursDiff = msDiff / (1000 * 60 * 60);
-	const yearsDiff = Math.floor(hoursDiff / 12);
+	const yearsDiff = Math.floor(hoursDiff / 24);
 	const monthsDiff = Math.floor(hoursDiff % 12);
 
 	const currentYear = startYear + yearsDiff;
