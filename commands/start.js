@@ -63,5 +63,5 @@ module.exports.application_command = () => {
 		.addNumberOption(option => option.setName('tank-cost').setDescription('The cost of a tank.').setRequired(true))
 		.addNumberOption(option => option.setName('tank-upkeep').setDescription('The paycheck upkeep of a tank.').setRequired(true))
 		.addNumberOption(option => option.setName('army-upkeep').setDescription('The paycheck upkeep of an army.').setRequired(true))
-		.addNumberOption(option => option.setName('minutes-per-month').setDescription('The minutes taken for a month to set in a game. ex: 15, 30, 45, 60, 90, 120, 150, 180, 240. Leaving it empty will enter it as 120.').setRequired(false));
+		.addNumberOption(option => option.setName('minutes-per-month').setDescription('The minutes taken for a month in game. ex: 15, 30, 45, 60, 90, 120, 150, 180, 240. Leaving it empty = 120.').setRequired(false));
 };
