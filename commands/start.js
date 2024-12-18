@@ -7,7 +7,7 @@ module.exports.interaction = async (interaction, game) => {
 	const tankCost = interaction.options.getNumber('tank-cost');
 	const tankUpkeep = interaction.options.getNumber('tank-upkeep');
 	const armyUpkeep = interaction.options.getNumber('army-upkeep');
-	const minutesPerMonth = interaction.options.getNumber('minutes-per-month') || settings.minutesPerMonth; 
+	const minutesPerMonth = interaction.options.getNumber('minutes-per-month') || settings.minutesPerMonth;
 	const validMinutes = [0.5, 15, 30, 45, 60, 90, 120, 150, 180, 240];
 	if (!countriesFile.endsWith('.js')) return interaction.editReply('Invalid file format.');
 	if (game.started) return interaction.editReply('The game has already started.');
@@ -27,9 +27,8 @@ module.exports.interaction = async (interaction, game) => {
 	for (let i = 0; i < game.countries.length; i++) {
 		const country = game.countries[i];
 		if (country.type !== game.countries[i - 1]?.type) description += `\n**${country.type}**\n`;
-		description += `${i + 1}. ${country.country} ${country.flag}${country.pid ? ` <@${country.pid}>` : ''}${
-			country.active ? '' : ' (abandoned)'
-		}\n`;
+		description += `${i + 1}. ${country.country} ${country.flag}${country.pid ? ` <@${country.pid}>` : ''}${country.active ? '' : ' (abandoned)'
+			}\n`;
 	}
 	const splitted = description.match(/[\s\S]{1,3800}(?=\n|$)/g);
 	for (let i = 0; i < splitted.length; i++) {
@@ -53,7 +52,7 @@ module.exports.interaction = async (interaction, game) => {
 		}
 	}
 };
-module.exports.button = async interaction => {};
+module.exports.button = async interaction => { };
 module.exports.application_command = () => {
 	return new djs.SlashCommandBuilder()
 		.setName('start')
@@ -63,5 +62,5 @@ module.exports.application_command = () => {
 		.addNumberOption(option => option.setName('tank-cost').setDescription('The cost of a tank.').setRequired(true))
 		.addNumberOption(option => option.setName('tank-upkeep').setDescription('The paycheck upkeep of a tank.').setRequired(true))
 		.addNumberOption(option => option.setName('army-upkeep').setDescription('The paycheck upkeep of an army.').setRequired(true))
-		.addNumberOption(option => option.setName('minutes-per-month').setDescription('The minutes taken for a month in game. ex: 15, 30, 45, 60, 90, 120, 150, 180, 240. Leaving it empty = 120.').setRequired(false));
+		.addNumberOption(option => option.setName('minutes-per-month').setDescription('The minutes in 1 month. ex: 15, 30, 45, 60, 90, 120, 150, 180, 240. Default = 120.').setRequired(false));
 };
