@@ -5,12 +5,22 @@ module.exports.interaction = async (interaction, game) => {
 
 	const countriesFile = interaction.options.getString('countries-file');
 	const tankCost = interaction.options.getNumber('tank-cost');
+	const tankUpkeep = interaction.options.getNumber('tank-upkeep');
+	const armyUpkeep = interaction.options.getNumber('army-upkeep');
+	const minutesPerMonth = interaction.options.getNumber('minutes-per-month') || settings.minutesPerMonth; 
+	const validMinutes = [0.5, 15, 30, 45, 60, 90, 120, 150, 180, 240];
 	if (!countriesFile.endsWith('.js')) return interaction.editReply('Invalid file format.');
 	if (game.started) return interaction.editReply('The game has already started.');
 	game.start(countriesFile);
+	if (!validMinutes.includes(minutesPerMonth)) {
+		return interaction.editReply('The amount of minutes needs to be one of the options: (15, 30, 45, 60, 90, 120, 150, 180, or 240).');
+	}
 	interaction.client.gameStart[interaction.guild.id] = Date.now();
 	interaction.client.yearStart[interaction.guild.id] = countriesFile.split('-')[1].split('.')[0];
 	interaction.client.tankCost[interaction.guild.id] = tankCost;
+	interaction.client.tankUpkeep[interaction.guild.id] = tankUpkeep;
+	interaction.client.armyUpkeep[interaction.guild.id] = armyUpkeep;
+	interaction.client.minutesPerMonth[interaction.guild.id] = minutesPerMonth;
 
 	const embed = new djs.EmbedBuilder().setColor(settings.color);
 	let description = '';
@@ -50,5 +60,8 @@ module.exports.application_command = () => {
 		.setDescription('Starts a new game.')
 		.setDefaultMemberPermissions(djs.PermissionsBitField.Flags.Administrator)
 		.addStringOption(option => option.setName('countries-file').setDescription('What file to be used in the game.').setRequired(true))
-		.addNumberOption(option => option.setName('tank-cost').setDescription('The cost of a tank.').setRequired(true));
+		.addNumberOption(option => option.setName('tank-cost').setDescription('The cost of a tank.').setRequired(true))
+		.addNumberOption(option => option.setName('tank-upkeep').setDescription('The paycheck upkeep of a tank.').setRequired(true))
+		.addNumberOption(option => option.setName('army-upkeep').setDescription('The paycheck upkeep of an army.').setRequired(true))
+		.addNumberOption(option => option.setName('minutes-per-month').setDescription('The minutes taken for a month to set in a game. ex: 15, 30, 45, 60, 90, 120, 150, 180, 240. Leaving it empty will enter it as 120.').setRequired(false));
 };

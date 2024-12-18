@@ -8,7 +8,9 @@ module.exports.interaction = async (interaction, game) => {
 
 	const startYear = parseInt(interaction.client.yearStart[interaction.guild.id]);
 	const msDiff = Date.now() - interaction.client.gameStart[interaction.guild.id];
-	const hoursDiff = msDiff / (1000 * 60 * 60 * 2);
+	const guildId = interaction.guild.id;
+	const minutesPerMonth = interaction.client.minutesPerMonth[guildId]; 
+	const hoursDiff = msDiff / (1000 * 60 * Number(minutesPerMonth));
 	const yearsDiff = Math.floor(hoursDiff / 12);
 	const monthsDiff = Math.floor(hoursDiff % 12);
 
@@ -32,7 +34,7 @@ module.exports.interaction = async (interaction, game) => {
 	await interaction.editReply({ content: `The current date is ${currentMonth} ${currentYear}.`, ephemeral: true });
 };
 
-module.exports.button = async interaction => { };
+module.exports.button = async interaction => {};
 module.exports.application_command = () => {
 	return new djs.SlashCommandBuilder().setName('check-year').setDescription('Check the current year in the game.');
 };

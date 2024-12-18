@@ -8,12 +8,19 @@ module.exports.interaction = async (interaction, game) => {
 	const embed = new djs.EmbedBuilder().setColor(settings.color);
 	let description = '';
 	let sorted = game.countries.slice();
+
 	switch (subcommand) {
+		case 'military_power':
+			sorted.sort((a, b) => (b.army + Math.floor(b.army * (b.tank / 50))) - (a.army + Math.floor(a.army * (a.tank / 50))));
+			break;
 		case 'industry':
 			sorted.sort((a, b) => b.industry - a.industry);
 			break;
 		case 'army':
 			sorted.sort((a, b) => b.army - a.army);
+			break;
+		case 'tank':
+			sorted.sort((a, b) => b.tank - a.tank);
 			break;
 		case 'money':
 			sorted.sort((a, b) => b.money - a.money);
@@ -24,17 +31,33 @@ module.exports.interaction = async (interaction, game) => {
 		const country = sorted[i];
 		switch (subcommand) {
 			case 'industry':
-				description += `${i + 1}. ${country.country} ${country.flag} ${country.pid ? `<@${country.pid}> ` : ''}- ${
+				description += `${i + 1}. ${country.country}  ${country.flag}  ${country.pid ? `<@${country.pid}> ` : ''}-  ${
 					country.industry
 				} industry\n`;
 				break;
-			case 'army':
-				description += `${i + 1}. ${country.country} ${country.flag} ${country.pid ? `<@${country.pid}> ` : ''}- ${
+			case 'military_power':
+				description += `${i + 1}. ${country.country}  ${country.flag}  ${country.pid ? `<@${country.pid}> ` : ''}-  ${
+					country.army + Math.floor(country.army * (country.tank / 50))
+				} War Score ( ${
 					country.army
-				} army, ${country.tank} tanks\n`;
+				} army, ${
+					country.tank
+				} tanks)\n`;
+				break;
+			case 'army':
+				description += `${i + 1}. ${country.country}  ${country.flag}  ${country.pid ? `<@${country.pid}> ` : ''}-  ${
+					country.army
+				} army, ${
+					country.tank
+				} tanks\n`;
+				break;
+			case 'tank':
+				description += `${i + 1}. ${country.country}  ${country.flag}  ${country.pid ? `<@${country.pid}> ` : ''}-  ${
+					country.tank
+				} tanks\n`;
 				break;
 			case 'money':
-				description += `${i + 1}. ${country.country} ${country.flag} ${country.pid ? `<@${country.pid}> ` : ''}- ${
+				description += `${i + 1}. ${country.country}  ${country.flag}  ${country.pid ? `<@${country.pid}> ` : ''}-  ${
 					country.money
 				} money\n`;
 				break;
@@ -54,5 +77,7 @@ module.exports.application_command = () => {
 		.setDescription('View the top countries in different categories.')
 		.addSubcommand(subcommand => subcommand.setName('industry').setDescription('View the countries with the highest industry.'))
 		.addSubcommand(subcommand => subcommand.setName('army').setDescription('View the countries with the biggest army.'))
-		.addSubcommand(subcommand => subcommand.setName('money').setDescription('View the countries with the most money.'));
+		.addSubcommand(subcommand => subcommand.setName('tank').setDescription('View the countries with the most tanks.'))
+		.addSubcommand(subcommand => subcommand.setName('money').setDescription('View the countries with the most money.'))
+		.addSubcommand(subcommand => subcommand.setName('military_power').setDescription('View the countries with the strongest army.'));
 };

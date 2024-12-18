@@ -41,6 +41,7 @@ module.exports.interaction = async (interaction, game) => {
 			{ name: 'Industry', value: `${country.industry}`, inline: true },
 			{ name: 'Army', value: `${country.army}`, inline: true },
 			{ name: 'Tanks', value: `${country.tank}`, inline: true },
+			{ name: 'War Score', value: `${country.army + Math.floor(country.army * (country.tank / 50))}`, inline: true },
 			{ name: 'Money', value: `${Math.floor(country.money)}`, inline: true },
 			{ name: 'Type', value: `${country.type.slice(0, -1)}`, inline: true },
 		);

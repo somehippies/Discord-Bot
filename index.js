@@ -1,8 +1,9 @@
 const djs = require('discord.js');
 const fs = require('fs');
 const client = new djs.Client({
-	intents: ['Guilds', 'GuildMessages', 'GuildMembers', 'MessageContent'].map(r => djs.IntentsBitField.Flags[r]),
+	intents: ['Guilds', 'GuildMessages','MessageContent'].map(r => djs.IntentsBitField.Flags[r]),
 });
+// 'GuildMembers'
 const settings = require('./settings.json');
 
 class Country {
@@ -28,43 +29,69 @@ class Country {
 	 * @param {Defender} defender - The defending entity.
 	 * @returns {Object} - An object containing the winner, loser, and casualties of the war.
 	 */
-	static getWarResult(attacker, defender) {
-		const attackerScore = attacker.getWarScore();
-		const defenderScore = defender.getWarScore() * 1.2;
-		const totalScore = attackerScore + defenderScore;
-		const rng = Math.floor(Math.random() * totalScore);
-		const atkLoses = attacker.applyWarCasualties();
-		const defLoses = defender.applyWarCasualties();
-		return {
-			winner: rng < attackerScore ? attacker : defender,
-			loser: rng < attackerScore ? defender : attacker,
-			atkLoses,
-			defLoses,
-		};
-	}
+static getWarResult(attacker, defender) {
+	const attackerScore = attacker.getWarScore();
+	const defenderScore = defender.getWarScore() * 1.2;
+	const totalScore = attackerScore + defenderScore;
+	const rng = Math.floor(Math.random() * totalScore);
+	const atkLoses = attacker.applyattackerWarCasualties(attacker, defender);
+	const defLoses = defender.applydefenderWarCasualties(defender, attacker);
+	return {
+		winner: rng < attackerScore ? attacker : defender,
+		loser: rng < attackerScore ? defender : attacker,
+		atkLoses,
+		defLoses,
+	};
+}
 
-	applyWarCasualties() {
-		const casualties = Math.floor(Math.random() * 0.03 * this.army + 0.1 * this.army);
-		this.army -= casualties;
-		return casualties;
+applyattackerWarCasualties(attacker, defender, casualties) {
+	const attackerScore = attacker.getWarScore();
+	const defenderScore = defender.getWarScore() * 1.2;
+	if (attackerScore / defenderScore < 1) {
+		casualties = Math.floor(Math.random() * 0.07 * this.army + 0.1 * this.army);
+	} 
+	else { 
+		casualties = Math.floor(Math.random() * 0.07 * this.army + 0.1 * this.army *((1) / (attackerScore / defenderScore)));
 	}
+	if (casualties < 1) {
+		casualties = 1;
+	}
+	this.army -= casualties;
+	return casualties;
+}
+
+applydefenderWarCasualties (defender, attacker, casualties) {
+	const attackerScore = attacker.getWarScore();
+	const defenderScore = defender.getWarScore() * 1.2;
+	if (defenderScore / attackerScore < 1) {
+		casualties = Math.floor(Math.random() * 0.04 * this.army + 0.1 * this.army);
+	} 
+	else {
+		casualties = Math.floor(Math.random() * 0.04 * this.army + 0.1 * this.army * (1) / (defenderScore / attackerScore))
+	}
+	if (casualties < 1 && this.army >= 1) {
+		casualties = 1;
+	}
+	this.army -= casualties;
+	return casualties;
+}
 }
 
 class Game {
-    constructor() {
-        this.countries = require('./countries/countries-1933.js').countries.map(c => new Country(...c));
-        this.started = false;
-    }
+		constructor() {
+				this.countries = require('./countries/countries-1933.js').countries.map(c => new Country(...c));
+				this.started = false;
+		}
 
-    start(countriesFile) {
-        this.countries = require(`./countries/${countriesFile}`).countries.map(c => new Country(...c));
-        this.started = true;
-    }
+		start(countriesFile) {
+				this.countries = require(`./countries/${countriesFile}`).countries.map(c => new Country(...c));
+				this.started = true;
+		}
 
-    end() {
-        this.started = false;
-        this.countries = require('./countries/countries-1933.js').countries.map(c => new Country(...c));
-    }
+		end() {
+				this.started = false;
+				this.countries = require('./countries/countries-1933.js').countries.map(c => new Country(...c));
+		}
 
 	assignCountry(pid, country) {
 		const c = this.countries.find(c => c.country === country);
@@ -97,18 +124,20 @@ const games = {};
 
 //Money Interval Manager
 setInterval(async () => {
-	for (const guild of Object.keys(games)) {
-		const game = games[guild];
-		if (game.started)
-			game.countries.forEach(c => {
-				if (/*c.pid &&*/ c.active) {
-					c.money += c.industry / 20;
-					//console.log(`${c.country} has gained $${c.industry / 20}`);
+		for (const guild of Object.keys(games)) {
+				const game = games[guild];
+				if (game.started) {
+						game.countries.forEach(c => {
+								if (/*c.pid &&*/ c.active) {
+										c.money += ((c.industry / 20) - (c.tank * client.tankUpkeep[guild] + c.army * client.armyUpkeep[guild]));
+										//console.log(`${c.country} has gained $${c.industry / 20} and lost $$(c.tank * client.tankUpkeep[guild] + c.army * client.armyUpkeep[guild]) resulting in a total of ((c.industry / 20) - (c.tank * client.tankUpkeep[guild] + c.army * client.armyUpkeep[guild]))`);
+								}
+						});
+				} else {
+						console.log('Game not started in this server!');
 				}
-			});
-		else console.log(`Game not started in this server!`);
-	}
-	client.interval = Date.now();
+		}
+		client.interval = Date.now();
 }, 1000 * 60 * 60 * settings.moneyIntervalInHours);
 
 //SaveGame Manager
@@ -118,7 +147,7 @@ setInterval(async () => {
 		if (game.started) {
 			const saveObj = { others: {}, game: [] };
 			saveObj.game = game.countries;
-			saveObj.others = { started: client.gameStart[guild], yearStart: client.yearStart[guild], tankCost: client.tankCost[guild] };
+			saveObj.others = { started: client.gameStart[guild], yearStart: client.yearStart[guild], tankCost: client.tankCost[guild], tankUpkeep: client.tankUpkeep[guild], armyUpkeep: client.armyUpkeep[guild], minutesPerMonth: client.minutesPerMonth[guild] };
 			//!! Please create the folder saves or this will error
 			fs.writeFileSync(`./saves/${guild}.json`, JSON.stringify(saveObj));
 			console.log(`Saved game in ${guild}`);
@@ -140,6 +169,9 @@ client.once('ready', async () => {
 	client.gameStart = {};
 	client.yearStart = {};
 	client.tankCost = {};
+	client.tankUpkeep = {};
+	client.armyUpkeep = {};
+	client.minutesPerMonth = {};
 });
 
 client.on('interactionCreate', async interaction => {
