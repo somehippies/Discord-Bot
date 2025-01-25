@@ -10,7 +10,7 @@ module.exports.countries = [
     ['Qing China', 2000, 40, 0, 5, 'Regional Powers', '🇹🇼'],
     ['Austria', 1900, 40, 0, 5, 'Regional Powers', '🇦🇹'],
     ['Hungary', 1400, 20, 0, 4, 'Regional Powers', '🇭🇺'],
-    ['Ottoman Empire', 2100, 55, 0, -5, 'Regional Powers', '🇹🇷'],
+    ['Ottoman Empire', 2000, 55, 0, -5, 'Regional Powers', '🇹🇷'],
     ['Japan', 2200, 30, 0, 50, 'Regional Powers', '🇯🇵'],
     ['Brazil', 1200, 10, 0, 10, 'Regional Powers', '🇧🇷'],
     ['British Raj', 1200, 20, 0, 10, 'Regional Powers', '🇬🇧🇮🇳'],
