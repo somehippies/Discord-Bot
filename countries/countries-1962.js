@@ -62,14 +62,11 @@ module.exports.countries = [
     ['New Zealand', 400, 6, 0, 0, 'Minor Powers', '🇳🇿'],
     ['Peru', 500, 6, 0, 0, 'Minor Powers', '🇵🇪'], //partner
 
-	// italian
+	// italian puppet / italian sphere/influence
     	['Croatia', 600, 12, 2, 0, 'Minor Powers', '🇭🇷'], //italian puppet
 	['Hellenic State', 800, 6, 0, 0, 'Minor Powers', '🇬🇷🇮🇹'], //italian puppet
 	['Egypt', 800, 12, 0, 0, 'Minor Powers', '🇪🇬🇮🇹'], //italian puppet
 	['Iraq', 300, 5, 0, 0, 'Minor Powers', '🇮🇶'], //heavy italian influence, in triumvirate. kinda between puppet and influenced
-	
-	// italian INFLUENCED (in order by abt how much)
-	
 	['Switzerland', 800, 11, 1, 0, 'Minor Powers', '🇨🇭'], //survived alpine crisis, liechtenstein died tho, italian aligned..ish?
 	['Saudi Arabia', 300, 3, 0, 0, 'Minor Powers', '🇸🇦'], // italian economic influence
     //unaligned minors
@@ -88,7 +85,8 @@ module.exports.countries = [
 	['Bolivia', 400, 4, 0, 0, 'Minor Powers', '🇧🇴'], //embarassed from loss to paraguay
 	['Uruguay', 400, 3, 0, 0, 'Minor Powers', '🇺🇾'], //ofn partner, friends with brazil
 	
-	['Afghanistan', 700, 19, 0, 0, 'Minor Powers', '🇦🇫'], //took a bunch of pakistan (CLAIRE)
+	['Afghanistan', 600, 19, 0, 0, 'Minor Powers', '🇦🇫'], //took a bunch of pakistan, balochi puppet
+	['Iran', 840, 17, 0, 0, 'Minor Powers', '🇦🇫'], //germany took over oil, economically german influenced (CLAIRE ADDED !!! LMK IF IT ALREADY EXISTS)
 
 // INSIGNIFICANT POWERS
 	
@@ -130,9 +128,6 @@ module.exports.countries = [
 	['Haiti', 200, 5, 0, 0, 'Insignificant Powers', '🇭🇹'],
 	['Liberia', 200, 1, 0, 0, 'Insignificant Powers', '🇱🇷'],
     
-
-
-	
     ['Vietcong', 100, 27, 0, 0, 'Insignificant Powers', '🇻🇳'],
     ['Kampuchea', 200, 2, 0, 0, 'Insignificant Powers', '🇰🇭'], // kinda fucked, semi-satellite state of thailand, neglected, phnom penh is rich city, (CLAIRE)
     ['Laos', 100, 2, 0, 0, 'Insignificant Powers', '🇱🇦'],
@@ -148,7 +143,7 @@ module.exports.countries = [
     ['Ceylon', 100, 3, 0, 0, 'Insignificant Powers', '🇱🇰'],
     ['Baloch Union', 100, 3, 0, 0, 'Insignificant Powers', '🇦🇫🇵🇰'],
     
-    
+    // MICROSTATES 
 	['San Marino', 100, 0, 0, 0, 'Microstates', '🇸🇲🇮🇹'],
 	['Vatican City State', 100, 0, 0, 0, 'Microstates', '🇻🇦'],
 	['Monaco', 100, 0, 0, 0, 'Microstates', '🇲🇨🇮🇹'],
