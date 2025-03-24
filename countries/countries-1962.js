@@ -2,42 +2,41 @@ module.exports.countries = [
     //superpowers
 	['United States', 13400, 145, 65, 0, 'Super Powers', '🇺🇸'],
 	['Nazi Germany', 12200, 320, 60, 0, 'Super Powers', '🇩🇪'],
-	['Japan', 12000, 250, 55, 0, 'Super Powers', '🇯🇵'], //cringe !!!!!!
+	['Japan', 12000, 250, 55, 0, 'Super Powers', '🇯🇵'], // sigma !
     
     //majors
 	['China', 2600, 130, 15, 0, 'Major Powers', '🇹🇼🇯🇵'], //japanese puppet essentially
-	['Italy', 6900, 180, 15, 0, 'Major Powers', '🇮🇹'], //leader of triumvirate
+	['Italy', 7100, 180, 15, 0, 'Major Powers', '🇮🇹'], //leader of triumvirate
 	
     
     //einheitspakt regionals
     ['United Kingdom', 3100, 15, 5, 0, 'Regional Powers', '🇬🇧'],
-    
-    
+    ['Hungary', 1200, 26, 3, 0, 'Minor Powers', '🇭🇺'], //german civil war will leave them alone for a bit, 
+    ['Romania', 1500, 36, 10, 0, 'Minor Powers', '🇷🇴'], // no north transylvania... sadge
+    ['French State', 2100, 5, 0, 0, 'Minor Powers', '🇫🇷'], //forcefully, also crippled, 
     //coprosperity regionals
-    ['Azad Hind', 1100, 52, 4, 0, 'Regional Powers', '🇮🇳🇯🇵'], //GEACPS
-	['Indonesia', 1100, 40, 0, 0, 'Regional Powers', '🇮🇩'], //unstable, GEACPS
-    ['Manchuria', 1200, 11, 0, 0, 'Regional Powers', '🐉🇯🇵'], // GEACPS, very japanese-reliant
+    ['Azad Hind', 1900, 59, 4, 0, 'Regional Powers', '🇮🇳🇯🇵'], //GEACPS
+	['Indonesia', 1500, 40, 0, 35, 'Regional Powers', '🇮🇩'], //unstable, GEACPS
+    ['Manchuria', 2200, 11, 0, 0, 'Regional Powers', '🐉🇯🇵'], // GEACPS, very japanese-reliant ( HIGH IND AND LOW ARMY IS INTENTIONAL)
 	
     //ofn regionals
-	['Australia', 1700, 29, 4, 0, 'Regional Powers', '🇦🇺'], //fucking hates the j*ps, super based !!!!!! 
+	['Australia', 1600, 29, 4, 0, 'Regional Powers', '🇦🇺'], //fucking hates the j*ps 
 	['Brazil', 1700, 24, 1, 0, 'Regional Powers', '🇧🇷'], //observer 
     ['South Africa', 600, 12, 0, 0, 'Regional Powers', '🇿🇦🇬🇧🇳🇱'],  //not fully ofn aligned until boer war
     ['Canada', 2700, 34, 9, 0, 'Regional Powers', '🇨🇦'], //exile british government essentially
     
     //independent regionals
-    ['Free India', 2400, 53, 3, 20, 'Regional Powers', '🇮🇳'], //goes out of way to be neutral and non-aligned
-	['Argentina', 1500, 18, 1, 0, 'Regional Powers', '🇦🇷'], //current triumvirate observer
-	['Mexico', 1800, 14, 2, 0, 'Regional Powers', '🇲🇽'], //choose between ofn and coprosperity
-	['Kazakhstan', 1900, 2, 0, 0, 'Regional Powers', '🇰🇿'], // communist
-	['Turkey', 1600, 30, 6, 0, 'Regional Powers', '🇹🇷'], //triumvirate member
-	['Iberia', 1300, 24, 4, 0, 'Regional Powers', '🇪🇸🇵🇹'], //triumvirate member
-	['Burgundy', 1300, 89, 25, 0, 'Regional Powers', '🇩🇪🇧🇪'], // STRENG GEHEIM
+    ['Free India', 2500, 62, 3, 20, 'Regional Powers', '🇮🇳'], //goes out of way to be neutral and non-aligned
+	['Argentina', 1400, 27, 1, 0, 'Regional Powers', '🇦🇷'], //current triumvirate observer
+	['Mexico', 1800, 28, 2, 0, 'Regional Powers', '🇲🇽'], //choose between ofn and coprosperity
+	['Turkey', 2300, 46, 6, 0, 'Regional Powers', '🇹🇷'], //triumvirate member
+	['Iberia', 2200, 38, 4, 0, 'Regional Powers', '🇪🇸🇵🇹'], //triumvirate member
+	['Burgundy', 1300, 96, 25, 0, 'Regional Powers', '🇩🇪🇧🇪'], // STRENG GEHEIM
 	
     //einheitspakt minors
-    ['French State', 2100, 5, 0, 0, 'Minor Powers', '🇫🇷'], //forcefully, also crippled, 
-    ['Hungary', 1300, 26, 3, 0, 'Minor Powers', '🇭🇺'], //german civil war will leave them alone for a bit, 
+    
     ['Slovakia', 500, 7, 0, 0, 'Minor Powers', '🇧🇬'], //
-    ['Romania', 1600, 36, 10, 0, 'Minor Powers', '🇷🇴'],
+    
     ['Bulgaria', 900, 17, 1, 0, 'Minor Powers', '🇧🇬'], //stagnant and dying bulgaria, german civil war will let them free, temp. 
     ['RK Norway', 500, 2, 0, 0, 'Minor Powers', '🇳🇴🇩🇪'], //germany occupies Nordstern, 
 	['Denmark', 600, 2, 0, 0, 'Minor Powers', '🇩🇰🇩🇪'], //Silkeborg garrison presents existential threat to independence, 
@@ -48,7 +47,7 @@ module.exports.countries = [
     ['RK Kaukasien', 500, 14, 0, 0, 'Minor Powers', '🇬🇪🇩🇪'],
     ['RK Niederlande', 500, 7, 0, 0, 'Minor Powers', '🇳🇱🇩🇪'],
     ['Generalgouvernement', 500, 11, 0, 'Minor Powers', '🇵🇱🇩🇪'],
-    ['Serbia', 600, 7, 0, 'Minor Powers', '🇷🇸'], //forcefully, german civil war will let them free
+    ['Serbia', 600, 14, 0, 'Minor Powers', '🇷🇸'], //forcefully, german civil war will let them free
     ['Ostafrika', 200, 5, 0, 0, 'Minor Powers', '🇩🇪'],
     ['Zentralafrika', 200, 5, 0, 0, 'Minor Powers', '🇩🇪'],
     ['Sudwestafrika', 200, 5, 0, 0, 'Minor Powers', '🇩🇪'],
@@ -56,27 +55,27 @@ module.exports.countries = [
     //coprosperity minors
     ['Philippines', 400, 12, 0, 0, 'Minor Powers', '🇵🇭🇯🇵'],//japanese puppet in manila and surrounding area
     ['Thai State', 700, 22, 0, 0, 'Minor Powers', '🇹🇭'], // japanese influenced/indirect puppet. own sphere of influence in laos + kampuchea
-	['Vietnam', 300, 18, 0, 0, 'Minor Powers', '🇻🇳🇯🇵'], //fighting vietcong
-    ['Guangdong', 1000, 2, 0, 0, 'Minor Powers' '🇹🇼🇯🇵'],
-    ['Mengjiang', 400, 8, 0, 0, 'Minor Powers', '🇲🇳🇯🇵'],
+	['Vietnam', 600, 18, 0, -10, 'Minor Powers', '🇻🇳🇯🇵'], //fighting vietcong
+    ['Guangdong', 1100, 10, 0, 50, 'Minor Powers' '🇹🇼🇯🇵'],
+    ['Mengjiang', 600, 8, 0, 0, 'Minor Powers', '🇲🇳🇯🇵'],
 	
     //ofn minors
-    ['Venezuela', 1000, 6, 0, 0, 'Minor Powers', '🇻🇪'], //unstable af, anti-american sentiment
-    ['New Zealand', 700, 6, 0, 0, 'Minor Powers', '🇳🇿'],
-    ['Peru', 800, 6, 0, 0, 'Minor Powers', '🇵🇪'], //partner
-	['West Indies', 400, 6, 0, 0, 'Minor Powers', '🇫🇯'], //dependent on ofn
-	['British Honduras', 400, 6, 0, 0, 'Minor Powers', '🇨🇦🇧🇿'], //dependent on ofn, puppet of canada
-	['Fiji', 600, 6, 0, 0, 'Minor Powers', '🇹🇹'], //dependent on ofn
-	['Haiti', 400, 5, 0, 0, 'Minor Powers', '🇭🇹'], //dependent on ofn
-	['Iceland', 400, 2, 0, 0, 'Minor Powers', '🇮🇸'], // independent member of ofn
+    ['Venezuela', 600, 6, 0, 0, 'Minor Powers', '🇻🇪'], //unstable af, anti-american sentiment
+    ['New Zealand', 700, 19, 0, 0, 'Minor Powers', '🇳🇿'],
+    ['Peru', 500, 12, 0, 0, 'Minor Powers', '🇵🇪'], //partner
+	['West Indies', 400, 1, 0, 0, 'Minor Powers', '🇫🇯'], //dependent on ofn
+	['British Honduras', 300, 1, 0, 0, 'Minor Powers', '🇨🇦🇧🇿'], //dependent on ofn, puppet of canada
+	['Fiji', 200, 1, 0, 0, 'Minor Powers', '🇹🇹'], //dependent on ofn
+	['Haiti', 300, 3, 0, 0, 'Minor Powers', '🇭🇹'], //dependent on ofn
+	['Iceland', 600, 2, 0, 0, 'Minor Powers', '🇮🇸'], // independent member of ofn
 
 	// italian puppet / italian sphere/influence
-    	['Croatia', 600, 12, 2, 0, 'Minor Powers', '🇭🇷'], //italian puppet
-	['Hellenic State', 800, 6, 0, 0, 'Minor Powers', '🇬🇷🇮🇹'], //italian puppet
-	['Egypt', 800, 12, 0, 0, 'Minor Powers', '🇪🇬🇮🇹'], //italian puppet
-	['Iraq', 300, 5, 0, 0, 'Minor Powers', '🇮🇶'], //heavy italian influence, in triumvirate. kinda between puppet and influenced
-	['Switzerland', 800, 11, 1, 0, 'Minor Powers', '🇨🇭'], //survived alpine crisis, liechtenstein died tho, italian aligned..ish?
-	['Saudi Arabia', 300, 3, 0, 0, 'Minor Powers', '🇸🇦'], // italian economic influence
+    	['Croatia', 600, 24, 2, 0, 'Minor Powers', '🇭🇷'], //italian puppet
+	['Hellenic State', 900, 16, 0, 0, 'Minor Powers', '🇬🇷🇮🇹'], //italian puppet
+	['Egypt', 800, 18, 0, 0, 'Minor Powers', '🇪🇬🇮🇹'], //italian puppet
+	['Iraq', 500, , 0, 0, 'Minor Powers', '🇮🇶'], //heavy italian influence, in triumvirate. kinda between puppet and influenced
+	['Switzerland', 800, 44, 1, 0, 'Minor Powers', '🇨🇭'], //survived alpine crisis, liechtenstein died tho, italian aligned..ish?
+	['Saudi Arabia', 500, 9, 0, 0, 'Minor Powers', '🇸🇦'], // italian economic influence
 	
     //unaligned minors
     ['Sweden', 1400, 32, 2, 0, 'Minor Powers', '🇸🇪'], // liberal democracy with occasional german collaboration and major german economic ties, touched up by claire
@@ -88,8 +87,8 @@ module.exports.countries = [
 	
 	['Cuba', 300, 6, 0, 0, 'Minor Powers', '🇨🇺'], //castro, not neccesarily communist
 	['Chile', 700, 6, 0, 0, 'Minor Powers', '🇨🇱'], //ofn and coprosperity compete over influence
-	['Colombia', 900, 5, 0, 0, 'Minor Powers', '🇨🇴'], //iberian supported
-	['Colombian Revolutionaries', 500, 3, 0, 0, 'Minor Powers', '🇨🇴⚒️'], //ofn supported
+	['Colombia', 800, 5, 0, 0, 'Minor Powers', '🇨🇴'], //iberian supported
+	['Colombian Revolutionaries', 400, 3, 0, 0, 'Minor Powers', '🇨🇴⚒️'], //ofn supported
 	['New Grenada', 500, 2, 0, 0, 'Minor Powers', '🇨🇴🏴'], //i think italian supported?
 	['Bolivia', 400, 4, 0, 0, 'Minor Powers', '🇧🇴'], //embarassed from loss to paraguay
 	['Uruguay', 500, 3, 0, 0, 'Minor Powers', '🇺🇾'], //ofn partner, friends with brazil
@@ -100,9 +99,10 @@ module.exports.countries = [
 	['Uzbekistan', 500, 2, 0, 0, 'Minor Powers', '🇺🇿'], // communist
 	['Tajikistan', 400, 2, 0, 0, 'Minor Powers', '🇹🇯'], // communist
 	['Kyrgyzstan', 500, 2, 0, 0, 'Minor Powers', '🇰🇬'], // communist
-	['Karakalpakstan', 400, 2, 0, 0, 'Minor Powers', '🇺🇿❌], // pretty much socialist anti authoritarian exiles seceding from Uzbekistan
+	['Karakalpakstan', 400, 2, 0, 0, 'Minor Powers', '🇺🇿❌'], // pretty much socialist anti authoritarian exiles seceding from Uzbekistan
 	['Turkestan', 400, 2, 0, 0, 'Minor Powers', '🇹🇯🐕'], // nazi
-		
+	['Kazakhstan', 900, 32, 0, 0, 'Regional Powers', '🇰🇿'], // communist
+
 	['Madagascar', 600, 1, 0, 0, 'Minor Powers', '🇲🇬'], // starts as french state puppet
 	['Yorubaland', 400, 1, 0, 0, 'Minor Powers', '🇳🇬'], // very anti cameroon
 	['Cameroon', 600, 1, 0, 0, 'Minor Powers', '🇨🇲'], // very pan-african
@@ -113,7 +113,7 @@ module.exports.countries = [
     ['NRA 24th Army', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼'],
     ['Xinjiang BDA', 300, 6, 0, 0, 'Insignificant Powers', '🇹🇼'],
     ['Jinshaan', 400, 8, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
-	['Nepal', 200, 2, 0, 0, 'Insignificant Powers', '🇳🇵'],
+	['Nepal', 200, 2, 0, 0, 'Insignificant Powers', '🇳🇵'], // 
 
 	
 	['Oman', 100, 1, 0, 0, 'Insignificant Powers', '🇴🇲'],
@@ -141,11 +141,12 @@ module.exports.countries = [
 	['Ghana', 200, 1, 0, 0, 'Insignificant Powers', '🇬🇭'],
 	['Dahomey', 300, 1, 0, 0, 'Insignificant Powers', '🇧🇯'],
 	
-	['Mosul and Kerkuk', 200, 2, 0, 0, 'Insignificant Powers', '🇮🇶🇹🇷'],
-	['Syria', 200, 3, 0, 0, 'Insignificant Powers', '🇸🇾🇹🇷'],
-    ['Armenia', 180, 1, 0, 0, 'Insignificant Powers', '🇦🇲🇹🇷'],
+	['Mosul and Kerkuk', 300, 2, 0, 0, 'Insignificant Powers', '🇮🇶🇹🇷'],
+	['Syria', 300, 3, 0, 0, 'Insignificant Powers', '🇸🇾🇹🇷'],
+    ['Armenia', 260, 1, 0, 0, 'Insignificant Powers', '🇦🇲🇹🇷'],
 
-	['Northern Ireland', 100, 3, 0, 0, 'Insignificant Powers', '🇮🇪'],
+	['Northern Ireland', 200, 3, 0, 0, 'Insignificant Powers', '🇮🇪'],
+	['Transnistria', 200, 2, 0, 0, 'Insignificant Powers', '🇷🇴🇩🇪'] // governed by romania, germans have a decent say in affairs, germans + romanians there.. its fucking weird
 	
 	['Ecuador', 300, 3, 0, 0, 'Insignificant Powers', '🇪🇨'],
 	['Paraguay', 300, 6, 0, 0, 'Insignificant Powers', '🇵🇾'],
@@ -156,7 +157,7 @@ module.exports.countries = [
 	['Nicaragua', 200, 3, 0, 0, 'Insignificant Powers', '🇳🇮'],
 	['Costa Rica', 200, 3, 0, 0, 'Insignificant Powers', '🇨🇷'],
 	['Panama', 200, 3, 0, 0, 'Insignificant Powers', '🇵🇦'],
-    ['Puerto Plata', 0, 2, 0, 0, 'Insignificant Powers', '🇩🇴']
+    ['Puerto Plata', 0, 2, 0, 0, 'Insignificant Powers', '🇩🇴'], // why does this exist ?
 	['Guyana', 300, 4, 0, 0, 'Insignificant Powers', '🇬🇾'], //dependent member of ofn
 	['Suriname', 300, 4, 0, 0, 'Insignificant Powers', '🇸🇷'], //dependent member of ofn
 	['Faroe Islands', 300, 1, 0, 0, 'Insignificant Powers', '🇫🇴'], //dependent member of ofn
@@ -165,14 +166,14 @@ module.exports.countries = [
     ['Kampuchea', 200, 2, 0, 0, 'Insignificant Powers', '🇰🇭'], // kinda fucked, semi-satellite state of thailand, neglected, phnom penh is rich city, (CLAIRE)
     ['Laos', 100, 2, 0, 0, 'Insignificant Powers', '🇱🇦'],
     
-    ['Seihoku Homengun', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
+    ['Seihoku Homengun', 300, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
     ['Yunnan Province', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
     ['Guizhou Province', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
     ['Guangxi Province', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
     ['Myanmar', 300, 5, 0, 0, 'Insignificant Powers', '🇲🇲🇯🇵'] // super unstable 'union', thais and chinese invaded before and took land (CLAIRE)
     ['Malaya', 200, 11, 0, 0, 'Insignificant Powers', '🇲🇾🇯🇵'], // (CLAIRE)
     ['UMAJF', 100, 16, 0, 0, 'Insignificant Powers', '🇲🇾⚒️'],
-    ['Sarawak', 200, 7, 0, 0, 'Insignificant Powers', '🇲🇾🇧🇳'],
+    ['Sarawak', 300, 7, 0, 0, 'Insignificant Powers', '🇲🇾🇧🇳'],
     ['Ceylon', 100, 3, 0, 0, 'Insignificant Powers', '🇱🇰'],
     ['Baloch Union', 100, 3, 0, 0, 'Insignificant Powers', '🇦🇫🇵🇰'],
 	['North West Frontier Province', 100, 1, 0, 0, 'Insignificant Powers', '🇦🇫🇵🇰🇮🇷'],
