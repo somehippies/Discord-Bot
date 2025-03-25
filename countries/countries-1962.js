@@ -56,7 +56,7 @@ module.exports.countries = [
     ['Philippines', 400, 12, 0, 0, 'Minor Powers', '🇵🇭🇯🇵'],//japanese puppet in manila and surrounding area
     ['Thai State', 700, 22, 0, 0, 'Minor Powers', '🇹🇭'], // japanese influenced/indirect puppet. own sphere of influence in laos + kampuchea
 	['Vietnam', 600, 18, 0, -10, 'Minor Powers', '🇻🇳🇯🇵'], //fighting vietcong
-    ['Guangdong', 1100, 10, 0, 50, 'Minor Powers' '🇹🇼🇯🇵'],
+    ['Guangdong', 1100, 10, 0, 50, 'Minor Powers', '🇹🇼🇯🇵'],
     ['Mengjiang', 600, 8, 0, 0, 'Minor Powers', '🇲🇳🇯🇵'],
 	
     //ofn minors
@@ -73,7 +73,7 @@ module.exports.countries = [
     	['Croatia', 600, 24, 2, 0, 'Minor Powers', '🇭🇷'], //italian puppet
 	['Hellenic State', 900, 16, 0, 0, 'Minor Powers', '🇬🇷🇮🇹'], //italian puppet
 	['Egypt', 800, 18, 0, 0, 'Minor Powers', '🇪🇬🇮🇹'], //italian puppet
-	['Iraq', 500, , 0, 0, 'Minor Powers', '🇮🇶'], //heavy italian influence, in triumvirate. kinda between puppet and influenced
+	['Iraq', 500, 8, 0, 0, 'Minor Powers', '🇮🇶'], //heavy italian influence, in triumvirate. kinda between puppet and influenced
 	['Switzerland', 800, 44, 1, 0, 'Minor Powers', '🇨🇭'], //survived alpine crisis, liechtenstein died tho, italian aligned..ish?
 	['Saudi Arabia', 500, 9, 0, 0, 'Minor Powers', '🇸🇦'], // italian economic influence
 	
@@ -81,9 +81,9 @@ module.exports.countries = [
     ['Sweden', 1400, 32, 2, 0, 'Minor Powers', '🇸🇪'], // liberal democracy with occasional german collaboration and major german economic ties, touched up by claire
 	['Dominican Republic', 600, 8, 0, 0, 'Minor Powers', '🇩🇴'], // triumvirate observer
 	['Finland', 1100, 16, 3, 0, 'Minor Powers', '🇫🇮'], 
-    ['Free Philippines', 400, 7, 0, 0, 'Minor Powers' '🇵🇭'], //american sponsored anti-japanese southern philippines
-    ['AFRSR', 200, 5, 0, 0, 'Minor Powers' '🇵🇭⚒️'], //commies in north philippines
-	['Free France', 400, 10, 0, 0, 'Minor Powers' '🇫🇷🇨🇮'], //american alligned but isnt apart of sphere or even economically dependent because of their mineral exports
+    ['Free Philippines', 400, 7, 0, 0, 'Minor Powers', '🇵🇭'], //american sponsored anti-japanese southern philippines
+    ['AFRSR', 200, 5, 0, 0, 'Minor Powers', '🇵🇭⚒️'], //commies in north philippines
+	['Free France', 400, 10, 0, 0, 'Minor Powers', '🇫🇷🇨🇮'], //american alligned but isnt apart of sphere or even economically dependent because of their mineral exports
 	
 	['Cuba', 300, 6, 0, 0, 'Minor Powers', '🇨🇺'], //castro, not neccesarily communist
 	['Chile', 700, 6, 0, 0, 'Minor Powers', '🇨🇱'], //ofn and coprosperity compete over influence
@@ -119,10 +119,10 @@ module.exports.countries = [
 	['Oman', 100, 1, 0, 0, 'Insignificant Powers', '🇴🇲'],
 	['Yemen', 180, 1, 0, 0, 'Insignificant Powers', '🇾🇪'],
 	['Levant', 400, 7, 0, 0, 'Insignificant Powers', '🇯🇴🇮🇹'],
-	['Italian Gulf', 100, 1, 0, 0, 'Insignificant Powers', '🇦🇪🇮🇹']
-        ['Italian East Africa', 300, 8, 0, 0, 'Insignificant Powers', '🇪🇹🇮🇹']
+	['Italian Gulf', 100, 1, 0, 0, 'Insignificant Powers', '🇦🇪🇮🇹'],
+    ['Italian East Africa', 300, 8, 0, 0, 'Insignificant Powers', '🇪🇹🇮🇹'],
 	['Albania', 200, 4, 0, 0, 'Insignificant Powers', '🇦🇱🇮🇹'],
-	['Montenegro', 100, 2, 0, 0, 'Insignificant Powers', '🇮🇲🇮🇹']
+	['Montenegro', 100, 2, 0, 0, 'Insignificant Powers', '🇮🇲🇮🇹'],
 
 	['Iberian Algeria', 400	, 3, 0, 0, 'Insignificant Powers', '🇩🇿🇪🇸'],
 	['Italian Algeria', 600, 3, 0, 0, 'Insignificant Powers', '🇩🇿🇮🇹'],
@@ -146,7 +146,7 @@ module.exports.countries = [
     ['Armenia', 260, 1, 0, 0, 'Insignificant Powers', '🇦🇲🇹🇷'],
 
 	['Northern Ireland', 200, 3, 0, 0, 'Insignificant Powers', '🇮🇪'],
-	['Transnistria', 200, 2, 0, 0, 'Insignificant Powers', '🇷🇴🇩🇪'] // governed by romania, germans have a decent say in affairs, germans + romanians there.. its fucking weird
+	['Transnistria', 200, 2, 0, 0, 'Insignificant Powers', '🇷🇴🇩🇪'], // governed by romania, germans have a decent say in affairs, germans + romanians there.. its fucking weird
 	
 	['Ecuador', 300, 3, 0, 0, 'Insignificant Powers', '🇪🇨'],
 	['Paraguay', 300, 6, 0, 0, 'Insignificant Powers', '🇵🇾'],
@@ -170,7 +170,7 @@ module.exports.countries = [
     ['Yunnan Province', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
     ['Guizhou Province', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
     ['Guangxi Province', 200, 4, 0, 0, 'Insignificant Powers', '🇹🇼🇯🇵'],
-    ['Myanmar', 300, 5, 0, 0, 'Insignificant Powers', '🇲🇲🇯🇵'] // super unstable 'union', thais and chinese invaded before and took land (CLAIRE)
+    ['Myanmar', 300, 5, 0, 0, 'Insignificant Powers', '🇲🇲🇯🇵'], // super unstable 'union', thais and chinese invaded before and took land (CLAIRE)
     ['Malaya', 200, 11, 0, 0, 'Insignificant Powers', '🇲🇾🇯🇵'], // (CLAIRE)
     ['UMAJF', 100, 16, 0, 0, 'Insignificant Powers', '🇲🇾⚒️'],
     ['Sarawak', 300, 7, 0, 0, 'Insignificant Powers', '🇲🇾🇧🇳'],
@@ -189,8 +189,8 @@ module.exports.countries = [
     
     
     //russian warlords west russia
-    ['WRRF', 500, 14, 0, 0, 'Minor Power', '🇷🇺⚒️'], //strongest in west russia
-	['Onega', 100, 5, 0, 0, 'Insignificant Power', '🇷🇺'], //finnish supported anti-communists
+    ['WRRF', 600, 14, 0, 0, 'Minor Powers', '🇷🇺⚒️'], //strongest in west russia
+	['Onega', 100, 5, 0, 0, 'Insignificant Powers', '🇷🇺'], //finnish supported anti-communists
     ['Komi', 400, 12, 0, 0, 'Insignificant Powers', '🇷🇺'],
     ['Vologda', 300, 12, 0, 0, 'Insignificant Powers', '🇷🇺'], //"neutral zone"
     ['Gorky', 200, 4, 0, 0, 'Insignificant Powers', '🇷🇺'], //commie
