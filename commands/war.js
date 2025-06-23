@@ -12,7 +12,6 @@ module.exports.interaction = async (interaction, game) => {
 	//if (!c.active) return interaction.editReply('Target country is inactive.');
 	//if (!c.pid) return interaction.editReply('This country is unclaimed.');
 	if (c.pid === interaction.user.id) return interaction.editReply('You cannot declare war on yourself.');
-	if (p.army < 10) return interaction.editReply('You need at least 10 army to declare war.');
 	//Keep the comments if you want to allow players to fight unclaimed countries
 
 	const result = p.constructor.getWarResult(p, c);
